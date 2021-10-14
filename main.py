@@ -66,7 +66,7 @@ font = pygame.font.Font(None, 36)
 allFallingObjects = pygame.sprite.Group()
 
 # Define additional Functions and Procedures here
-nextApple = pygame.time.get_ticks() + 2500
+nextApple = pygame.time.get_ticks() + 100
 
 charactersGroup = pygame.sprite.Group()
 character = Character()
@@ -94,7 +94,7 @@ while done == False:
         nextObject = FallingObject()
         nextObject.setImage("Apple.png")
         allFallingObjects.add(nextObject)
-        nextApple = pygame.time.get_ticks() + 1500
+        nextApple = pygame.time.get_ticks() + 400
 
     for eachObject in (allFallingObjects.sprites()):
         eachObject.moveFallingObjects(5)
